@@ -23,7 +23,7 @@ body{
     --width-md: 90%;
     --width-sm: 95%;
 
-    --transition: all ease-in .4s;
+    --transition: all ease-in .35s;
 }
 
 /* common class and css */
@@ -220,6 +220,58 @@ header{
 
 
 
+/* ============our team css=================== */
+.team-container{
+    text-align: center;
+    padding-top: 130px;
+}
+
+.team-container> p{
+    padding: 20px 100px 24px;
+}
+
+.team-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.team-container .team-content .team-member{
+    border: 1px solid var(--color-primary);
+    transition: var(--transition);
+}
+
+.team-container .team-content .team-member:hover{
+    box-shadow: 2px 2px 10px 5px rgba(24, 24, 24, 0.233);
+    cursor: pointer;
+}
+
+.team-container .team-content .team-member img{
+    width: 100%;
+    filter: saturate(.4);
+    transition: all linear .3s;
+}
+
+.team-container .team-content .team-member:hover img{
+    cursor: pointer;
+    filter: saturate(1.2);
+}
+
+.team-container .team-content .team-member h4{
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+
+.team-container .team-content .team-member h5{
+    color: var(--color-dark-grey);
+    font-size: 18px;
+}
+
+.team-container .team-content .team-member p{
+    padding: 10px 16px;
+}
+
+
 
 /* ==========facts css============ */
 .facts-container{
@@ -400,9 +452,28 @@ footer{
         margin-top: 24px;
     }
 
+
+    /* ========our team======== */
+    .team-container{
+        padding-top: 225px;
+    }
+    
+    .team-container> p{
+        padding: 10px 0;
+    }
+
+    .team-content{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    .team-container .team-content .team-member img{
+        filter: saturate(1);
+    }
+
     /* =========facts======= */
     .facts-container{
-        padding-top: 215px;
+        padding-top: 85px;
     }
 
     .facts-container> p{
@@ -455,6 +526,8 @@ footer{
 }
 
 
+
+/* =============meadia query tablat================ */
 @media screen and (min-width: 577px) and (max-width:992px) {
     /* common css and class */
     .container{
@@ -543,9 +616,26 @@ footer{
         margin-top: 24px;
     }
 
+     /* ========our team======== */
+    .team-container{
+         padding-top: 325px;
+    }
+        
+    .team-container> p{
+        padding: 10px 0;
+    }
+    
+    .team-content{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .team-container .team-content .team-member img{
+        filter: saturate(1);
+    }
+
     /* =========facts======= */
     .facts-container{
-        padding-top: 320px;
+        padding-top: 85px;
     }
 
     .facts-container> p{
