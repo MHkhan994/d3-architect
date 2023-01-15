@@ -229,7 +229,7 @@ header{
 .facts-container .facts-content{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+    gap: 80px;
     padding-left: 40px;
 }
 
