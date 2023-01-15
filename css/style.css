@@ -19,7 +19,7 @@ body{
     --color-light-primary: #FF900E1A;
     --color-white: #ffffff;
 
-    --width-lg: 80%;
+    --width-lg: 1444px;
     --width-md: 90%;
     --width-sm: 95%;
 
@@ -213,6 +213,65 @@ header{
 }
 
 
+
+
+/* ==========facts css============ */
+.facts-container{
+    padding-top: 130px;
+}
+
+.facts-container .facts-content{
+    width: 1400px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 124px;
+    padding-left: 40px;
+}
+
+.facts-container> p{
+    padding: 24px 0 100px 0;
+}
+
+.facts-container .facts-content .facts-card{
+    text-align: center;
+    padding: 60px 36px;
+    border: 1px solid var(--color-primary);
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.facts-container .facts-content .facts-card:hover{
+    cursor: pointer;
+    box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.253);
+    background-color: var(--color-light-primary);
+    animation: giggle .2s .1s 2;
+}
+
+@keyframes giggle{
+    0%{
+        transform: rotate(-1deg);
+    }
+    20%{
+        transform: rotate(-3deg);
+    }
+    40%{
+        transform: rotate(0deg);
+    }
+    60%{
+        transform: rotate(1deg);
+    }
+    80%{
+        transform: rotate(3deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.facts-container .facts-content .facts-card h2{
+    padding: 10px 0 5px 0;
+}
+
 /* ==========media query mobile============ */
 @media screen and (max-width:576px) {
 
@@ -309,6 +368,32 @@ header{
         margin: 0 auto;
         margin-top: 24px;
     }
+
+    /* =========facts======= */
+    .facts-container{
+        padding-top: 215px;
+    }
+
+    .facts-container> p{
+        padding: 24px 0 30px 0;
+    }
+
+    .facts-container .facts-content{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 24px;
+        padding-left: 0px;
+    }
+
+    .facts-container .facts-content .facts-card{
+        text-align: center;
+        padding: 40px 16px;
+        border: 1px solid var(--color-primary);
+        border-radius: 8px;
+        transition: var(--transition);
+    }
+    
 }
 
 
